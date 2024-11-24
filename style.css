@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
   font-family: "Georgia", serif;
   background: url("background-laptop-story.jpg") no-repeat center center/cover;
@@ -12,17 +13,20 @@ body {
   text-align: center;
 }
 
+/* Responsive Background for Mobile */
 @media (max-width: 768px) {
   body {
     background: url("background-mobile-story.jpg") no-repeat center center/cover;
   }
 }
 
+/* Heading Styling */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
+/* Controls Section Styling */
 section.controls {
   display: flex;
   flex-direction: column;
@@ -32,6 +36,7 @@ section.controls {
   max-width: 600px;
 }
 
+/* Multi-Select Dropdown Styling */
 select[multiple] {
   height: 120px;
   width: 100%;
@@ -42,6 +47,7 @@ select[multiple] {
   background-color: #f9f9f9;
 }
 
+/* Button Styling */
 button {
   margin: 20px;
   padding: 10px 20px;
@@ -54,10 +60,12 @@ button {
   transition: background-color 0.3s ease;
 }
 
+/* Button Hover Effect */
 button:hover {
   background-color: #004c99;
 }
 
+/* Result Box Styling */
 section#result-box {
   margin-top: 20px;
   background: rgba(0, 0, 0, 0.6);
@@ -67,7 +75,33 @@ section#result-box {
   max-width: 600px;
 }
 
+/* Result Text Styling */
 p#result {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Slightly reduce font size for mobile */
+  }
+
+  select[multiple] {
+    height: 100px; /* Adjust height for mobile */
+    font-size: 0.9rem; /* Slightly reduce font size */
+  }
+
+  button {
+    font-size: 1rem; /* Adjust button size for mobile */
+    padding: 8px 16px; /* Adjust padding for mobile */
+  }
+
+  section#result-box {
+    width: 90%; /* Ensure result box fits the mobile screen */
+  }
+
+  p#result {
+    font-size: 1rem; /* Adjust result text size for mobile */
+  }
 }
