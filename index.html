@@ -10,86 +10,106 @@
     <main>
       <h1>Story Idea Generator</h1>
       <section class="controls">
-        <label for="genre">Choose Genre(s):</label>
-        <select id="genre" multiple>
-          <option value="fantasy">Fantasy</option>
-          <option value="sci-fi">Science Fiction</option>
-          <option value="romance">Romance</option>
-          <option value="mystery">Mystery</option>
-          <option value="thriller">Thriller</option>
-          <option value="horror">Horror</option>
-          <option value="adventure">Adventure</option>
-          <option value="historical">Historical Fiction</option>
-          <option value="dystopian">Dystopian</option>
-          <option value="magical-realism">Magical Realism</option>
-          <option value="comedy">Comedy</option>
-          <option value="mythology">Mythology</option>
-          <option value="political-drama">Political Drama</option>
-          <option value="slice-of-life">Slice of Life</option>
-        </select>
+        <!-- Genres Dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-btn" id="genre-btn">Genre</button>
+          <div class="dropdown-menu" id="genre-menu">
+            <div class="dropdown-item" data-value="fantasy">Fantasy</div>
+            <div class="dropdown-item" data-value="sci-fi">Science Fiction</div>
+            <div class="dropdown-item" data-value="romance">Romance</div>
+            <div class="dropdown-item" data-value="mystery">Mystery</div>
+            <div class="dropdown-item" data-value="thriller">Thriller</div>
+            <div class="dropdown-item" data-value="horror">Horror</div>
+            <div class="dropdown-item" data-value="adventure">Adventure</div>
+            <div class="dropdown-item" data-value="historical">
+              Historical Fiction
+            </div>
+            <div class="dropdown-item" data-value="dystopian">Dystopian</div>
+            <div class="dropdown-item" data-value="magical-realism">
+              Magical Realism
+            </div>
+            <div class="dropdown-item" data-value="comedy">Comedy</div>
+            <div class="dropdown-item" data-value="mythology">Mythology</div>
+            <div class="dropdown-item" data-value="political-drama">
+              Political Drama
+            </div>
+            <div class="dropdown-item" data-value="slice-of-life">
+              Slice of Life
+            </div>
+          </div>
+        </div>
 
-        <label for="character">Choose Character Type(s):</label>
-        <select id="character" multiple>
-          <option value="hero">Hero</option>
-          <option value="villain">Villain</option>
-          <option value="detective">Detective</option>
-          <option value="explorer">Explorer</option>
-          <option value="wizard">Wizard</option>
-          <option value="rebel">Rebel</option>
-          <option value="scientist">Scientist</option>
-          <option value="artist">Artist</option>
-          <option value="guardian">Guardian</option>
-          <option value="drunk">Drunkard</option>
-          <option value="conman">Conman</option>
-          <option value="assassin">Assassin</option>
-          <option value="street-vendor">Street Vendor</option>
-          <option value="fortune-teller">Fortune Teller</option>
-          <option value="godlike-being">Mystic</option>
-          <option value="time-traveler">Time Traveler</option>
-          <option value="pirate">Pirate</option>
-          <option value="robot">Robot</option>
-          <option value="villager">Villager</option>
-          <option value="priest">Priest</option>
-          <option value="healer">Healer</option>
-          <option value="royalty">Royalty</option>
-          <option value="gangster">Gangster</option>
-          <option value="gardener">Gardener</option>
-          <option value="librarian">Librarian</option>
-          <option value="baker">Baker</option>
-          <option value="teacher">Teacher</option>
-          <option value="child">Child</option>
-          <option value="farmer">Farmer</option>
-          <option value="daydreamer">Daydreamer</option>
-          <option value="pet-owner">Pet Owner</option>
-          <option value="businessman">Businessman</option>
-          <option value="monk">Monk</option>
-          <option value="mother">Mother</option>
-          <option value="father">Father</option>
-          <option value="beggar">Beggar</option>
-        </select>
+        <!-- Characters Dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-btn" id="character-btn">Character</button>
+          <div class="dropdown-menu" id="character-menu">
+            <div class="dropdown-item" data-value="hero">Hero</div>
+            <div class="dropdown-item" data-value="villain">Villain</div>
+            <div class="dropdown-item" data-value="detective">Detective</div>
+            <div class="dropdown-item" data-value="explorer">Explorer</div>
+            <div class="dropdown-item" data-value="wizard">Wizard</div>
+            <div class="dropdown-item" data-value="rebel">Rebel</div>
+            <div class="dropdown-item" data-value="scientist">Scientist</div>
+            <div class="dropdown-item" data-value="artist">Artist</div>
+            <div class="dropdown-item" data-value="guardian">Guardian</div>
+            <div class="dropdown-item" data-value="drunk">Drunkard</div>
+            <div class="dropdown-item" data-value="conman">Conman</div>
+            <div class="dropdown-item" data-value="assassin">Assassin</div>
+            <div class="dropdown-item" data-value="street-vendor">
+              Street Vendor
+            </div>
+            <div class="dropdown-item" data-value="fortune-teller">
+              Fortune Teller
+            </div>
+            <div class="dropdown-item" data-value="godlike-being">Mystic</div>
+            <div class="dropdown-item" data-value="time-traveler">
+              Time Traveler
+            </div>
+            <div class="dropdown-item" data-value="pirate">Pirate</div>
+            <div class="dropdown-item" data-value="robot">Robot</div>
+            <div class="dropdown-item" data-value="villager">Villager</div>
+            <div class="dropdown-item" data-value="priest">Priest</div>
+            <div class="dropdown-item" data-value="healer">Healer</div>
+            <div class="dropdown-item" data-value="royalty">Royalty</div>
+          </div>
+        </div>
 
-        <label for="setting">Choose Setting(s):</label>
-        <select id="setting" multiple>
-          <option value="space">Space</option>
-          <option value="medieval">Medieval Castle</option>
-          <option value="city">Modern City</option>
-          <option value="forest">Mystical Forest</option>
-          <option value="desert">Desert</option>
-          <option value="ocean">Underwater</option>
-          <option value="post-apocalypse">Post-Apocalyptic Wasteland</option>
-          <option value="village">Village</option>
-          <option value="haunted-house">Haunted Mansion</option>
-          <option value="dream-world">Dream World</option>
-          <option value="distant-planet">Distant Planet</option>
-          <option value="ancient-ruins">Ancient Ruins</option>
-          <option value="jungle">Jungle</option>
-          <option value="cottage">Cottage</option>
-          <option value="bookstore">Bookstore</option>
-          <option value="field">Field</option>
-          <option value="tea-shop">Tea Shop</option>
-        </select>
+        <!-- Settings Dropdown -->
+        <div class="dropdown">
+          <button class="dropdown-btn" id="setting-btn">Setting</button>
+          <div class="dropdown-menu" id="setting-menu">
+            <div class="dropdown-item" data-value="space">Space</div>
+            <div class="dropdown-item" data-value="medieval">
+              Medieval Castle
+            </div>
+            <div class="dropdown-item" data-value="city">Modern City</div>
+            <div class="dropdown-item" data-value="forest">Mystical Forest</div>
+            <div class="dropdown-item" data-value="desert">Desert</div>
+            <div class="dropdown-item" data-value="ocean">Underwater</div>
+            <div class="dropdown-item" data-value="post-apocalypse">
+              Post-Apocalyptic Wasteland
+            </div>
+            <div class="dropdown-item" data-value="village">Village</div>
+            <div class="dropdown-item" data-value="haunted-house">
+              Haunted Mansion
+            </div>
+            <div class="dropdown-item" data-value="dream-world">
+              Dream World
+            </div>
+            <div class="dropdown-item" data-value="distant-planet">
+              Distant Planet
+            </div>
+            <div class="dropdown-item" data-value="ancient-ruins">
+              Ancient Ruins
+            </div>
+          </div>
+        </div>
       </section>
+
+      <!-- Generate Button -->
       <button id="generate">Generate Story</button>
+
+      <!-- Result Section -->
       <section id="result-box">
         <h2>Your Story Idea:</h2>
         <p id="result">Click the button to generate a story!</p>

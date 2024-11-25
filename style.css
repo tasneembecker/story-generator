@@ -24,45 +24,129 @@ body {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #fff; /* Ensure the heading text stands out */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add shadow for better visibility */
 }
 
 /* Controls Section Styling */
 section.controls {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  gap: 20px;
   width: 80%;
   max-width: 600px;
+  background: rgba(225, 213, 189, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Ensure text is centered within each element */
+  margin: 0 auto; /* Center the controls box in its container */
+  background-image: rgb(121, 85, 2); /* Old paper texture */
+  background-size: cover; /* Ensure the texture covers the whole background */
+  background-position: center;
 }
 
-/* Multi-Select Dropdown Styling */
-select[multiple] {
-  height: 120px;
+/* Dropdown Container */
+.dropdown {
+  position: relative;
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center; /* Center dropdown box horizontally */
+}
+
+/* Dropdown Button Styling */
+.dropdown-btn {
+  width: 100%; /* Ensures button stretches to full width */
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  color: #333;
+  background: #f9f9f9;
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center; /* Centers text inside dropdown button */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dropdown Button Hover Effect */
+.dropdown-btn:hover {
+  background-color: #eaeaea;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown Content Styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 10;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Dropdown When Active */
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown Item Styling */
+.dropdown-item {
+  padding: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333; /* Text color for visibility */
+  background-color: #fff; /* Light background for contrast */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selected Item Styling */
+.dropdown-item.selected {
+  background-color: #f0f0f0; /* Slightly darker background for selected item */
+  color: #000; /* Ensure selected text is visible */
+  font-weight: bold;
+}
+
+/* Dropdown Item Hover Effect */
+.dropdown-item:hover {
+  background-color: #eaeaea;
+}
+
+/* Label Styling */
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: center; /* Center the label text */
 }
 
 /* Button Styling */
 button {
-  margin: 20px;
+  margin: 20px auto;
   padding: 10px 20px;
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
-  background-color: #0066cc;
+  background-color: #097239;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-align: center; /* Ensure text is centered in the button */
+  display: block;
+  width: 80%; /* Ensure button is aligned */
 }
 
 /* Button Hover Effect */
 button:hover {
-  background-color: #004c99;
+  background-color: #034621;
 }
 
 /* Result Box Styling */
@@ -73,6 +157,8 @@ section#result-box {
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
+  color: #fff;
+  margin: 20px auto; /* Center the result box */
 }
 
 /* Result Text Styling */
@@ -85,11 +171,16 @@ p#result {
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem; /* Slightly reduce font size for mobile */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Adjust shadow for smaller screens */
   }
 
-  select[multiple] {
-    height: 100px; /* Adjust height for mobile */
-    font-size: 0.9rem; /* Slightly reduce font size */
+  .dropdown-btn {
+    font-size: 1rem; /* Adjust button size for mobile */
+    padding: 8px 15px; /* Adjust padding for mobile */
+  }
+
+  .dropdown-item {
+    font-size: 1rem; /* Adjust dropdown item font size for mobile */
   }
 
   button {
